@@ -10,6 +10,12 @@ struct s_etudiant{
 };
 int main()
 {
+    //objet de la structure
+    nom_eleve promesse;
+
+
+    // start using the strtucture
+
     //declaration des variables
     float valeur1, valeur2, valeurSolution =0.0f;
     char operation = '+';
