@@ -4,7 +4,7 @@
 using namespace std;
 struct s_etudiant{
     char nom_etudiant[20];
-    char classe_etudiant;
+    char classe_etudiant[10];
     int point[10];
     float reponse_proposee[10];
 };
