@@ -3,8 +3,8 @@
 
 using namespace std;
 struct s_etudiant{
-    char nom_eleve[20];
-    char classe_eleve;
+    char nom_etudiant[20];
+    char classe_etudiant;
     int point[10];
     float reponse_proposee[10];
 };
@@ -21,13 +21,22 @@ int main()
     char operation = '+';
     float reponse_proposee = 0.0f;
 
-    int nbre_quest = 0;
+    int nbre_quest;
 
     printf("BIENVENU AU TEST\n=================\n");
 
+    printf("NOM:\t");
+    scanf("%s", et1.nom_etudiant);
+    printf("\n\n");
+
+    printf("CLASSE:\t");
+    scanf("%s", et1.classe_etudiant);
+    printf("\n\n");
+
+    nbre_quest = 0;
 
     do{
-        printf("\n\nChoisir l'operation voulue:\n \t+ pour l'addition \n\t- pour la soustraction \n\t* pour la multiplication\n\t/ pour la division\n\t");
+        printf("\n\nChoisir l'operation voulue:\n \t+ pour l'addition \n\t- pour la soustraction \n\t* pour la multiplication\n\t/ pour la division\n\n\t");
 
         scanf("%c", &operation);
 
@@ -53,7 +62,11 @@ int main()
                     et1.point[nbre_quest] = 0;
                     printf("\nO O O O O O O O O O O O O  O\n\n");
                 }
+
+                nbre_quest ++;
+
                 break;
+
             case '-':
                 printf("\nsaisir la premiere valeur:  ");
                 scanf("%f",&valeur1);
@@ -74,6 +87,8 @@ int main()
                     et1.point[nbre_quest] = 0;
                     printf("\nO O O O O O O O O O O O O  O\n\n");
                 }
+
+                nbre_quest ++;
 
                 break;
 
@@ -98,6 +113,8 @@ int main()
                     printf("\nO O O O O O O O O O O O O  O\n\n");
                 }
 
+                nbre_quest ++;
+
                 break;
             case '/':
                 printf("\nsaisir la premiere valeur:  ");
@@ -120,12 +137,12 @@ int main()
                     printf("\nO O O O O O O O O O O O O  O\n\n");
                 }
 
+                nbre_quest ++;
 
                 break;
-            default: printf("\nO P E R A T I O N    N O N    R E C O N N U E\n");
         }
 
-        nbre_quest ++;
+
 
     }while(nbre_quest < 10);
 
