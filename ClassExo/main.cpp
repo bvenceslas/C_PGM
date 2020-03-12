@@ -11,7 +11,7 @@ struct s_etudiant{
 int main()
 {
     //objet de la structure
-    nom_eleve promesse;
+    s_etudiant et1;
 
 
     // start using the strtucture
@@ -21,96 +21,122 @@ int main()
     char operation = '+';
     float reponse_proposee = 0.0f;
 
+    int nbre_quest = 0;
+
     printf("BIENVENU AU TEST\n=================\n");
-    printf("\n\nChoisir l'operation voulue:\n \t+ pour l'addition \n\t- pour la soustraction \n\t* pour la multiplication\n\t/ pour la division\n\t");
-
-    scanf("%c", &operation);
-
-    switch(operation)
-    {
-        case '+':
-            printf("saisir la premiere valeur:  ");
-            scanf("%f",&valeur1);
-
-            printf("saisir la seconde valeur:  ");
-            scanf("%f", &valeur2);
-
-            printf("Proposer une reponse:  ");
-            scanf("%f", &reponse_proposee);
-
-            //calcul et test
-            valeurSolution = valeur1+valeur2;
-            if(reponse_proposee == valeurSolution){
-                printf("C O R R E C T");
-            }
-            else{
-                printf("O O O O O O O O O O O O O  O");
-            }
-            break;
-        case '-':
-            printf("saisir la premiere valeur:  ");
-            scanf("%f",&valeur1);
-
-            printf("saisir la seconde valeur:  ");
-            scanf("%f", &valeur2);
-
-            printf("Proposer une reponse:  ");
-            scanf("%f", &reponse_proposee);
-
-            //calcul et test
-            valeurSolution = valeur1-valeur2;
-            if(reponse_proposee == valeurSolution){
-                printf("C O R R E C T");
-            }
-            else{
-                printf("O O O O O O O O O O O O O  O");
-            }
-
-            break;
-
-        case '*':
-            printf("saisir la premiere valeur:  ");
-            scanf("%f",&valeur1);
-
-            printf("saisir la seconde valeur:  ");
-            scanf("%f", &valeur2);
-
-            printf("Proposer une reponse:  ");
-            scanf("%f", &reponse_proposee);
-
-            //calcul et test
-            valeurSolution = valeur1*valeur2;
-            if(reponse_proposee == valeurSolution){
-                printf("C O R R E C T");
-            }
-            else{
-                printf("O O O O O O O O O O O O O  O");
-            }
-
-            break;
-        case '/':
-            printf("saisir la premiere valeur:  ");
-            scanf("%f",&valeur1);
-
-            printf("saisir la seconde valeur:  ");
-            scanf("%f", &valeur2);
-
-            printf("Proposer une reponse:  ");
-            scanf("%f", &reponse_proposee);
-
-            //calcul et test
-            valeurSolution = valeur1/valeur2;
-            if(reponse_proposee == valeurSolution){
-                printf("C O R R E C T");
-            }
-            else{
-                printf("O O O O O O O O O O O O O  O");
-            }
 
 
-            break;
-        default: printf("O P E R A T I O N    N O N    R E C O N N U E");
-    }
+    do{
+        printf("\n\nChoisir l'operation voulue:\n \t+ pour l'addition \n\t- pour la soustraction \n\t* pour la multiplication\n\t/ pour la division\n\t");
+
+        scanf("%c", &operation);
+
+        switch(operation)
+        {
+            case '+':
+                printf("\nsaisir la premiere valeur:  ");
+                scanf("%f",&valeur1);
+
+                printf("\nsaisir la seconde valeur:  ");
+                scanf("%f", &valeur2);
+
+                printf("\nProposer une reponse:  ");
+                scanf("%f", &et1.reponse_proposee[nbre_quest]);
+
+                //calcul et test
+                valeurSolution = valeur1+valeur2;
+                if(et1.reponse_proposee[nbre_quest] == valeurSolution){
+                    et1.point[nbre_quest] = 5;
+                    printf("\nC O R R E C T\n\n");
+                }
+                else{
+                    et1.point[nbre_quest] = 0;
+                    printf("\nO O O O O O O O O O O O O  O\n\n");
+                }
+                break;
+            case '-':
+                printf("\nsaisir la premiere valeur:  ");
+                scanf("%f",&valeur1);
+
+                printf("\nsaisir la seconde valeur:  ");
+                scanf("%f", &valeur2);
+
+                printf("\nProposer une reponse:  ");
+                scanf("%f", &et1.reponse_proposee[nbre_quest]);
+
+                //calcul et test
+                valeurSolution = valeur1-valeur2;
+                if(et1.reponse_proposee[nbre_quest] == valeurSolution){
+                    et1.point[nbre_quest] = 5;
+                    printf("\nC O R R E C T\n\n");
+                }
+                else{
+                    et1.point[nbre_quest] = 0;
+                    printf("\nO O O O O O O O O O O O O  O\n\n");
+                }
+
+                break;
+
+            case '*':
+                printf("\nsaisir la premiere valeur:  ");
+                scanf("%f",&valeur1);
+
+                printf("\nsaisir la seconde valeur:  ");
+                scanf("%f", &valeur2);
+
+                printf("\nProposer une reponse:  ");
+                scanf("%f", &et1.reponse_proposee[nbre_quest]);
+
+                //calcul et test
+                valeurSolution = valeur1*valeur2;
+                if(et1.reponse_proposee[nbre_quest] == valeurSolution){
+                    et1.point[nbre_quest] = 5;
+                    printf("\nC O R R E C T\n\n");
+                }
+                else{
+                    et1.point[nbre_quest] = 0;
+                    printf("\nO O O O O O O O O O O O O  O\n\n");
+                }
+
+                break;
+            case '/':
+                printf("\nsaisir la premiere valeur:  ");
+                scanf("%f",&valeur1);
+
+                printf("\nsaisir la seconde valeur:  ");
+                scanf("%f", &valeur2);
+
+                printf("\nProposer une reponse:  ");
+                scanf("%f", &et1.reponse_proposee[nbre_quest]);
+
+                //calcul et test
+                valeurSolution = valeur1/valeur2;
+                if(et1.reponse_proposee[nbre_quest] == valeurSolution){
+                    et1.point[nbre_quest] = 5;
+                    printf("\nC O R R E C T\n\n");
+                }
+                else{
+                    et1.point[nbre_quest] = 0;
+                    printf("\nO O O O O O O O O O O O O  O\n\n");
+                }
+
+
+                break;
+            default: printf("\nO P E R A T I O N    N O N    R E C O N N U E\n");
+        }
+
+        nbre_quest ++;
+
+    }while(nbre_quest < 10);
+
+    printf("\nP R O C L A M M A T I O N \n=========================\n\n");
+
+    int resultat = et1.point[0]+et1.point[1]+et1.point[2]+et1.point[3]+et1.point[4]+et1.point[5]+et1.point[6]+et1.point[7]+et1.point[8]+et1.point[9];
+
+
+    printf("\nVous avez obtenu %i / 50", resultat);
+
+    printf("\nF     I     N \n==================\n");
 
     return 0;
 }
