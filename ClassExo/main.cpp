@@ -155,7 +155,16 @@ int main()
 
     printf("NOM : %s \n", +et1.nom_etudiant);
 
-    printf("\nVous avez obtenu %i / 50", resultat);
+
+    if(resultat >= 25){
+
+        printf("\n Felicitations !!!!, \nVous avez obtenu %i / 50", resultat);
+    }
+    else if(resultat <25){
+
+        printf("\n Bouffon Inapte !!!!, \nVous avez echoué  avec %i / 50", resultat);
+    }
+
 
     printf("\nF     I     N \n==================\n");
 
