@@ -151,6 +151,10 @@ int main()
     int resultat = et1.point[0]+et1.point[1]+et1.point[2]+et1.point[3]+et1.point[4]+et1.point[5]+et1.point[6]+et1.point[7]+et1.point[8]+et1.point[9];
 
 
+    printf("CLASSE : %s \n", +et1.classe_etudiant);
+
+    printf("NOM : %s \n", +et1.nom_etudiant);
+
     printf("\nVous avez obtenu %i / 50", resultat);
 
     printf("\nF     I     N \n==================\n");
